@@ -1,0 +1,57 @@
+<div class="outer">
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="text-center">
+          <h1>Login</h1>
+        </div>
+    
+        
+   <form [formGroup]="Login" (ngSubmit)="login()">
+
+    <div class="mb-3">
+      <label>UserName</label>
+      <input  formControlName="username"  type="username" class="form-control" ngModel required>
+      
+      </div>
+      <div class="mb-3">
+        <label >Emailid</label>
+        <input  formControlName="email"  type="email " class="form-control"  ngModel required>
+        </div>
+
+
+      <div class="mb-3">
+        <label >password</label>
+        <input  formControlName="password"  type="password" class="form-control" ngModel required>
+        </div>
+       
+          <div class="mb-3">
+            <label >Mobilenumber</label>
+            <input  formControlName="mobilenumber"  type="mobilenumber" class="form-control"  ngModel required><br>
+            <!-- <div *ngIf="f.mobileNumber.touched && f.mobileNumber.invalid" class="alert alert-danger">  
+              <div *ngIf="f.mobileNumber.errors.required">Mobile Number is required.</div>  
+              <div *ngIf="f.mobileNumber.errors.pattern">Please, Enter 10 digit Mobile Number.</div>   -->
+         
+           
+    <!-- <button type="submit"(click)="login() " class="btn btn-danger">login</button> -->
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <button type="button" (click)="login()"class="btn btn-primary"[disabled]="!Login.valid">login</button>
+        </div>
+        <div class="col">
+          <a  routerLink="/signup"><button type="button" class="btn btn-danger">Signup</button></a>
+        </div>
+        </div>
+      
+    
+  
+    </div>
+
+ 
+  </div>
+</form>
+  
+</div>
+</div>
